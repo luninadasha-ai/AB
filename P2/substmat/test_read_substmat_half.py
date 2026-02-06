@@ -1,5 +1,5 @@
 from pathlib import Path
-from read_substmat_half import read_substmat
+from read_substmat_half import read_substmat_half
 
 
 def test_read_substmat_minimal(tmp_path):
@@ -10,7 +10,7 @@ def test_read_substmat_minimal(tmp_path):
     mat_file = Path(__file__).parent / "blosum62_half.mat"
 
     # Read the matrix using the function
-    smat = read_substmat(str(mat_file))
+    smat = read_substmat_half(str(mat_file))
 
     #  Checks equivalent to the original doctest
     assert smat["W"]["W"] == 11
