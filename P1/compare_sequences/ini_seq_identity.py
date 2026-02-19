@@ -21,3 +21,20 @@ def seq_identity(seq1, seq2):
     0.0
     """
     # YOUR CODE HERE
+    if len(seq_1) != len(seq_2):
+        return
+    position = 0
+    match = 0
+
+    for a,b in zip(seq_1, seq_2):
+        if a == "-" or b == "-":
+            continue
+        else:
+            position += 1
+            if a == b:
+                match += 1
+    if position == 0:
+        return 0.0
+    
+    percentage = (match/position) * 100
+    return round(percentage, 1)
