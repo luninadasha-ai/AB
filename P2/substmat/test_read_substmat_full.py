@@ -1,5 +1,5 @@
 from pathlib import Path
-from DL_read_substmat_full import DL_read_substmat_full
+from read_substmat_full import read_substmat_full
 
 
 def test_read_substmat_full():
